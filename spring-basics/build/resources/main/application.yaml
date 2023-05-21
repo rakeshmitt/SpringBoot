@@ -1,0 +1,5 @@
+server:
+  port:  4442
+  address:
+  compression:
+    enabled: true
