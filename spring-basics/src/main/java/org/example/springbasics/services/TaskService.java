@@ -31,7 +31,7 @@ public class TaskService {
         taskList.add(new Task(taskId.getAndIncrement(), "Task 1", "desc1", new Date()));
     }
 
-    public List<Task> getTasks(){
+    public List<Task> getAllTasks(){
         return taskList;
     }
 
