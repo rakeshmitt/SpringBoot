@@ -16,7 +16,7 @@ public class TaskService {
     private final List<Task> taskList;
     private AtomicInteger taskId = new AtomicInteger(1);
 
-    public class TaskNotFoundException extends IllegalStateException
+    public class TaskNotFoundException extends IllegalArgumentException
     {
         public TaskNotFoundException(Integer id){
             super("task with id " + id + " not found.");
