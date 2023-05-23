@@ -1,10 +1,15 @@
 package org.example.springtaskmgrv2.entities;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+@Getter
+@Setter
 @Entity(name="tasks")
 //@Table(indexes = @Index(columnList="title"))
 public class TaskEntity extends BaseEntity {
@@ -27,6 +32,8 @@ public class TaskEntity extends BaseEntity {
      *
      * FetchType can be EAGER or LAZY. Not all DB supports LAZY loading.
      */
-   // @OneToMany(mappedBy = "task", fetch = FetchType.EAGER)
-   // List<NoteEntity> notes;
+   /* @OneToMany(mappedBy = "task", fetch = FetchType.EAGER)
+    List<NoteEntity> notes;
+
+    */
 }

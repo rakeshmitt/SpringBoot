@@ -49,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -67,7 +68,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.spring-taskmgr-v2">
+  <component name="RunManager" selected="Gradle.TasksRepositoryTests.testCreateTask">
     <configuration name="spring-taskmgr-v2" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="zulu-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -76,6 +77,29 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="TasksRepositoryTests.testCreateTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.springtaskmgrv2.repositories.TasksRepositoryTests.testCreateTask&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="spring-taskmgr-v2 [bootJar]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
@@ -185,6 +209,7 @@
     <list>
       <item itemvalue="Application.spring-taskmgr-v2" />
       <item itemvalue="Gradle.spring-taskmgr-v2 [bootJar]" />
+      <item itemvalue="Gradle.TasksRepositoryTests.testCreateTask" />
       <item itemvalue="Gradle.spring-taskmgr-v2 [bootRunMainClassName]" />
       <item itemvalue="Gradle.spring-taskmgr-v2 [build]" />
       <item itemvalue="Gradle.spring-taskmgr-v2 [buildDependents]" />
@@ -192,6 +217,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TasksRepositoryTests.testCreateTask" />
         <item itemvalue="Gradle.spring-taskmgr-v2 [bootRunMainClassName]" />
         <item itemvalue="Gradle.spring-taskmgr-v2 [build]" />
         <item itemvalue="Gradle.spring-taskmgr-v2 [buildDependents]" />
