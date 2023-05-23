@@ -1,11 +1,9 @@
 package org.example.springtaskmgrv2.entities;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity(name="tasks")
 //@Table(indexes = @Index(columnList="title"))
@@ -22,4 +20,13 @@ public class TaskEntity extends BaseEntity {
 
     @Column(name="due_date", nullable = true)
     Date dueDate;
+
+    /**
+     * keep the below codebase only if we want to fetch notes while fetching tasks
+     * otherwise we can fetch notes separately.
+     *
+     * FetchType can be EAGER or LAZY. Not all DB supports LAZY loading.
+     */
+   // @OneToMany(mappedBy = "task", fetch = FetchType.EAGER)
+   // List<NoteEntity> notes;
 }

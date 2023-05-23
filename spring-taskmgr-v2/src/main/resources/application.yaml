@@ -1,5 +1,5 @@
 server:
-  http: 7766
+  port: 7766
 spring:
   datasource:
     driver-class-name: org.h2.Driver
