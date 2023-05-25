@@ -19,11 +19,7 @@ public interface TasksRepository extends JpaRepository<TaskEntity, Integer> {
 
 
     //Ideally this is 'business logic' terminology (i.e. 'overdue') so shouldn't be here
-    @Query("" +
-            "SELECT t from tasks t" +
-               "WHERE t.completed=false "+
-               " AND t.dueDate < CURRENT_DATE"
-    )
+    @Query("SELECT t from tasks t WHERE t.completed=false AND t.dueDate < CURRENT_DATE")
     List<TaskEntity> findAllOverdue();
 
     //this would give same result as overdue
