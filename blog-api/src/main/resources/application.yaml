@@ -1,0 +1,17 @@
+server:
+  port: 7700
+
+driver:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url:jdbc:postgres: jdbc:postgresql://localhost:5432/blog
+    user_name: blog_user
+    password: blog_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
