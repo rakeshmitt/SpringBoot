@@ -23,3 +23,6 @@ GRANT ALL ON SCHEMA public TO blog_user;
 constructor injection is preferred over the field injection. User field level @Autowired if constructor injection
 is not possible. Since Constructor is injected first and then the fields. Here I have used both in controller class
 I have used constructor injection and in Service class used field injection.
+
+
+HAILSTORM - uber testing strategy

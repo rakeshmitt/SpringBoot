@@ -1,5 +1,6 @@
 package org.rakesh.practice.blogapi.users;
 
+import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.rakesh.practice.blogapi.users.dtos.CreateUserDTO;
 import org.rakesh.practice.blogapi.users.dtos.LoginUserDTO;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class UsersService {
 
     /*
@@ -18,6 +20,7 @@ public class UsersService {
 
     @Autowired
     ModelMapper modelMapper;
+
 
     public UserResponseDTO createUser(CreateUserDTO createUserDTO){
         //TODO: encrypt password encryption
