@@ -6,6 +6,7 @@ import org.rakesh.practice.blogapi.users.dtos.CreateUserDTO;
 import org.rakesh.practice.blogapi.users.dtos.LoginUserDTO;
 import org.rakesh.practice.blogapi.users.dtos.UserResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,12 +22,15 @@ public class UsersService {
     @Autowired
     ModelMapper modelMapper;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
 
     public UserResponseDTO createUser(CreateUserDTO createUserDTO){
-        //TODO: encrypt password encryption
         //TODO: email validation
         //TODO: check if user already exists
         UserEntity newUser = modelMapper.map(createUserDTO, UserEntity.class);
+        newUser.setPassword(passwordEncoder.encode(createUserDTO.getPassword()));
         var savedUser = usersRepository.save(newUser);
         var userResponseDTO = modelMapper.map(savedUser, UserResponseDTO.class);
         return userResponseDTO;
@@ -41,8 +45,9 @@ public class UsersService {
             throw new UserNotFoundException(loginUserDTO.getUsername());
         }
 
-        //TODO: implement password hashing
-        if(!userEntity.getPassword().equals(loginUserDTO.getPassword())) {
+        //compare the user provided password with hashed password
+        boolean passwordMatch = passwordEncoder.matches(loginUserDTO.getPassword(), userEntity.getPassword());
+        if(!passwordMatch) {
             throw new PasswordMismatchException(loginUserDTO.getUsername());
         }
 

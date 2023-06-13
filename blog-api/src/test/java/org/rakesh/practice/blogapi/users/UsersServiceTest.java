@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.rakesh.practice.blogapi.users.dtos.CreateUserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -20,7 +21,8 @@ public class UsersServiceTest {
     private UsersService createUserService() {
         return new UsersService(
                 usersRepository,
-                new ModelMapper()
+                new ModelMapper(),
+                new BCryptPasswordEncoder()
         );
     }
 
