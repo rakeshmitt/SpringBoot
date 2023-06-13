@@ -26,6 +26,7 @@ dependencies {
     //TODO: crypto is required to supprt encryption only if starter-security is not added.
     implementation 'org.springframework.security:spring-security-crypto'
     implementation 'org.modelmapper:modelmapper:3.0.0'
+    implementation 'com.auth0:java-jwt:4.3.0'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'com.mysql:mysql-connector-j'
