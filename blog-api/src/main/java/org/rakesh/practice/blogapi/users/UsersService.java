@@ -2,6 +2,7 @@ package org.rakesh.practice.blogapi.users;
 
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.rakesh.practice.blogapi.security.jwt.JWTService;
 import org.rakesh.practice.blogapi.users.dtos.CreateUserDTO;
 import org.rakesh.practice.blogapi.users.dtos.LoginUserDTO;
 import org.rakesh.practice.blogapi.users.dtos.UserResponseDTO;
@@ -25,6 +26,9 @@ public class UsersService {
     @Autowired
     PasswordEncoder passwordEncoder;
 
+    @Autowired
+    JWTService jwtService;
+
 
     public UserResponseDTO createUser(CreateUserDTO createUserDTO){
         //TODO: email validation
@@ -33,6 +37,7 @@ public class UsersService {
         newUser.setPassword(passwordEncoder.encode(createUserDTO.getPassword()));
         var savedUser = usersRepository.save(newUser);
         var userResponseDTO = modelMapper.map(savedUser, UserResponseDTO.class);
+        userResponseDTO.setToken(jwtService.createJWT(savedUser.getId()));
         return userResponseDTO;
     }
 
@@ -52,6 +57,7 @@ public class UsersService {
         }
 
         var userResponseDTO = modelMapper.map(userEntity, UserResponseDTO.class);
+        userResponseDTO.setToken(jwtService.createJWT(userEntity.getId()));
         return userResponseDTO;
     }
 

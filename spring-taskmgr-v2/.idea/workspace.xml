@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eae08213-4dc2-4301-93be-c0ecd830a965" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../blog-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../blog-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../blog-api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-api/src/main/java/org/rakesh/practice/blogapi/users/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog-api/src/main/java/org/rakesh/practice/blogapi/users/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-api/src/main/java/org/rakesh/practice/blogapi/users/dtos/UserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog-api/src/main/java/org/rakesh/practice/blogapi/users/dtos/UserResponseDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
